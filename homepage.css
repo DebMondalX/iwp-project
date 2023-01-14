@@ -1,0 +1,17 @@
+body {
+  background-color: palevioletred;
+}
+.first {
+  text-align: center;
+  background-color: blanchedalmond;
+}
+.text1 {
+  font-size: larger;
+}
+.button-hotel {
+  align-items: center;
+  text-align: center;
+}
+.hotel-portal {
+  font-size: 16px;
+}
