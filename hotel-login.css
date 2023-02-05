@@ -1,0 +1,16 @@
+.login-form {
+  border: solid red 2px;
+  height: 400px;
+  width: 40%;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  left: 400px;
+}
+
+form {
+  border: solid black 3px;
+  height: 400px;
+  width: 40%;
+  justify-content: center;
+}
