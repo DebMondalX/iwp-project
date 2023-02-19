@@ -1,0 +1,33 @@
+.shape {
+  justify-content: center;
+  display: flex;
+  position: relative;
+}
+.updateHotel {
+  background-color: salmon;
+  height: 200px;
+  width: 200px;
+  border: solid red 2px;
+  padding: 2%;
+}
+.updateCustomer {
+  background-color: yellow;
+  height: 200px;
+  width: 200px;
+  border: solid red 2px;
+  padding: 2%;
+}
+.viewHotel {
+  background-color: aliceblue;
+  height: 200px;
+  width: 200px;
+  border: solid red 2px;
+  padding: 2%;
+}
+.viewCustomer {
+  background-color: blueviolet;
+  height: 200px;
+  width: 200px;
+  border: solid red 2px;
+  padding: 2%;
+}
