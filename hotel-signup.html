@@ -4,23 +4,43 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="hotel-signup.css" />
     <title>Document</title>
   </head>
   <body>
-    <div class="signup">
+    <div class="D1">
       <form>
-        <label for="name">Hotel Name</label>
-        <input type="text" placeholder="name of hotel" /> <br />
-        <label for="email"> Email ID</label>
-        <input type="email" /><br />
-        <label for="phone">Phone Number</label>
-        <input type="tel" /> <br /><br />
-        <label for="about">Provide hotel description:</label>
-        <br />
-        <textarea name="HotelDescription" cols="30" rows="10"></textarea>
-        <br />
-        <button>Submit</button>
+          <h1>Sign up</h1>
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" placeholder="Full name" required><br>
+          <br>
+          <label for="phoneNo"> Phone </label>
+          <input type="text" name="phone" id="phone" placeholder="phone number" required><br><br>
+          <label for="type">Select hotel type</label>
+          <select name="HotelType" id="HotelType">
+            <option value="none" selected disabled hidden></option>
+            <option value="hotel"> Hotel</option>
+            <option value="villa">Villa</option>
+            <option value="apartment">Apartment</option>
+          </select>
+          <br><br>
+          <label for="email">Email</label>
+          (This will be the username)
+          <br>
+          <input type="email" name="email" id="email" placeholder="Email" required><br>
+          <br>
+
+          <label for="password">Password</label><br>
+          <input type="password" placeholder="Password" name="psw" required><br>
+  
+          <label for="psw">Confirm Password</label><br>
+          <input type="password" placeholder="Confirm Password" name="psw" required><br>
+          <input type="submit" value="Register"><br>
+        <label>
+          <div class="D2">
+              <p>Have an account? <a href="tourist-login.html">Log in</a> </p>
+          </div>
       </form>
-    </div>
+     </div> 
   </body>
 </html>

@@ -1,16 +1,18 @@
-.login-form {
-  border: solid red 2px;
-  height: 400px;
-  width: 40%;
-  justify-content: center;
-  display: flex;
-  position: relative;
-  left: 400px;
+.container {
+  height: 500px;
+  width: 500px;
+  background-color: antiquewhite;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
 }
-
-form {
-  border: solid black 3px;
-  height: 400px;
-  width: 45%;
-  justify-content: center;
+.box1 {
+  text-align: center;
+  padding-top: 100px;
+}
+.container2 {
+  height: 5%;
+  margin: 0 auto;
+  position: relative;
+  background: wheat;
 }

@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tourist Login</title>
-  <link rel="stylesheet" href="tourist-login.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tourist Login</title>
+    <link rel="stylesheet" href="tourist-login.css" />
+  </head>
+  <body>
+    <form>
+      <div class="container">
+        <h1>Login Page</h1>
+        <div class="box1">
+          <label for="username">Username</label><br />
+          <input
+            type="text"
+            name="username"
+            placeholder="Enter Username"
+            required
+          /><br />
 
-</head>
-<body>
-  <form>
-    <div class="container">
-      <h1>Login Page</h1>
-      <div class="box1">
-      <label for="username">Username</label><br>
-      <input type="text" name="username" placeholder="Enter Username" required><br>
+          <label for="pswd">Password</label><br />
+          <input
+            type="password"
+            name="pswd"
+            placeholder="Enter Password"
+            required
+          /><br />
 
-      <label for="pswd">Password</label><br>
-      <input type="password" name="pswd" placeholder="Enter Password" required><br>
+          <button type="submit">Login</button><br />
+        </div>
 
-      <button type="submit">Login</button><br>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-    <div class="container2" style="background-color:#f1f1f1">
-      
-      <span class="psw"><a href="#">Forgot password?</a></span>
-    </div>
-    <div class="signup">
-      <p>Don't have an Acoount?</p>
-      <a href="tourist-signup.html">Sign Up</a>
-    </div>
-    </div>
-  </form>
-</body>
+        <div class="signup">
+          <p>Don't have an Acoount?</p>
+          <a href="tourist-signup.html">Sign Up</a>
+        </div>
+      </div>
+    </form>
+  </body>
 </html>
