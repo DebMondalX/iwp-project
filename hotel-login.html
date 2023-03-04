@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="hotel-login.css" />
   </head>
   <body>
-    <form>
+    <form action="" method="post" onsubmit="return validation()">
       <div class="container">
         <h1>Hotel Login Page</h1>
         <div class="box1">
@@ -16,6 +16,7 @@
           <input
             type="text"
             name="username"
+            id="username"
             placeholder="Enter Username"
             required
           /><br />
@@ -24,6 +25,7 @@
           <input
             type="password"
             name="pswd"
+            id="pswd"
             placeholder="Enter Password"
             required
           /><br />
@@ -38,10 +40,12 @@
           <span class="psw"><a href="#">Forgot password?</a></span>
         </div>
         <div class="signup">
-          <p>Don't have an Acoount?</p>
+          <p>Don't have an Account?</p>
           <a href="hotel-signup.html">Sign Up</a>
         </div>
       </div>
     </form>
+
+    <script src="hotel-login.js"></script>
   </body>
 </html>
