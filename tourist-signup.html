@@ -9,7 +9,7 @@
 </head>
 <body>
    <div class="D1">
-    <form>
+    <form action="tourist-signupmessage.php" method="post" onsubmit="return validate()">
         <h1>Sign up</h1>
         <label for="email">Email</label><br>
         <input type="email" placeholder="Email" name="email" required><br>
@@ -25,12 +25,13 @@
 
         <label for="psw">Confirm Password</label><br>
         <input type="password" placeholder="Confirm Password" name="psw" required><br>
-        <button type="submit">Register</button><br>
+        <button type="submit" name="submit">Register</button><br>
       <label>
         <div class="D2">
             <p>Have an account? <a href="tourist-login.html">Log in</a> </p>
         </div>
     </form>
    </div> 
+   <script src="t_validate.js"></script>
 </body>
 </html>
