@@ -16,14 +16,17 @@ $checkin = $_POST['checkin'];
 $checkout = $_POST['checkout'];
 $guests = $_POST['guests'];
 
-$sql = "SELECT * FROM hotels WHERE destination = '$destination'";
+$sql = "SELECT * FROM hotel_register WHERE destination = '$destination'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // Display available hotels to the user
     while ($row = $result->fetch_assoc()) {
-        // Output hotel details (name, price, etc.)
-    }
+        // Echo the name of the hotel
+        echo "Hotel name: " . $row['hotel_name'] . "<br>";
+        echo "Successful";
+
+}
 } else {
     echo "No hotels found for the specified destination.";
 }
