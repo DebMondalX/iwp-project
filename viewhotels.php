@@ -7,6 +7,10 @@
     <title>Document</title>
   </head>
   <body>
-    to view all hotels
+    <?php
+      echo "<h3> The Hotels Registered With SuitCase :</h3>"
+
+      
+    ?>
   </body>
 </html>
