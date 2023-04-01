@@ -12,9 +12,10 @@
      $hpass = $_POST['password'];
      $htype = $_POST['HotelType'];
      $hphone = $_POST['phone'];
+     $dest  = $_POST['location'];
  }
  include "connection.php";
- $sql = "INSERT INTO hotel_register VALUES('$hname','$hemail','$hpass','$htype','$hphone')";
+ $sql = "INSERT INTO hotel_register VALUES('$hname','$hemail','$hpass','$htype','$hphone','$dest')";
  if(mysqli_query($conn,$sql)){
     echo "<h3>Successfully registered.</h3>";
  }
