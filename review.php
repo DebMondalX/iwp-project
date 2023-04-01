@@ -24,7 +24,7 @@
 
        }
        else {
-        echo '<h1>Connection failed.</h1>';
+        echo '<h1>Hotel doesnot exist.</h1>';
        }
     
     
