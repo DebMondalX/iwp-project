@@ -14,12 +14,20 @@
      
  }
  include "connection.php";
- $sql = "INSERT INTO tourist_details VALUES('$tfname','$tlname','$temail','$tpass')";
- if(mysqli_query($conn,$sql)){
+ // Check if user already exists in the database
+$sql = "SELECT * FROM tourist_details WHERE Email='$temail'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // User already exists
+  echo "This account already exists.";
+} else {
+ $sql1 = "INSERT INTO tourist_details VALUES('$temail','$tfname','$tlname','$tpass')";
+ if(mysqli_query($conn,$sql1)){
     echo "<h3>Successfully registered.</h3>";
  }
  else{
     echo "<h3>Error, can't register.</h3>";
  }
-
+}
 ?>

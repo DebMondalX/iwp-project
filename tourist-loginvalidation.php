@@ -1,33 +1,25 @@
 <?php
-    $name=$pass="";
+    $name="";
+    $pass="";
     if(isset($_POST['submit']))
     {
-        $name = $_POST['username'];
+        $name = $_POST['email'];
         $pass = $_POST['pswd'];
     }
-    //echo $name;
-    //echo $password;
+    
     include "connection.php";
-    //$sql = "select * from admin_cred where username = '$name' and password ='$pass'"
-    $sql = "select * from tourist_details where username ='$name' and password = '$pass'";
-    $result = mysqli_query($conn, $sql);
-    
-   // mysqli_store_result($conn);
-
-       // echo "Total No. of records :".mysqli_num_rows($result);
-    
-        
-    
-    if( mysqli_num_rows($result) > 0)
-    {
-        header("Location: admin-homepage.html");
-        echo "User exists";
-    }
-    else
-    {
-        echo "Login unsuccessful";
-    }
-    mysqli_close($conn);
+   
+       $sql = "SELECT * FROM tourist_details WHERE Email = '$name' AND assword =
+       '$pass'";
+       $result = mysqli_query($conn, $sql);
+       $check = mysqli_fetch_array($result);
+       if(isset($check)){
+        header("Location: explore.html");
+        echo '<h1>Connection is done</h1>';
+       }
+       else {
+        echo '<h1>Connection failed.</h1><p>Wrong user credentials</p>';
+       }
     
     
 ?>
