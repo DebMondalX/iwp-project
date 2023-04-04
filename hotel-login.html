@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="hotel-login.css" />
   </head>
   <body>
-    <form action="" method="post" onsubmit="return validation()">
+    <form action="hotel-login.php" method="post" onsubmit="return validation()">
       <div class="container">
         <h1>Hotel Login Page</h1>
         <div class="box1">
           <label for="username">Username</label><br />
           <input
-            type="text"
+            type="email"
             name="username"
             id="username"
             placeholder="Enter Username"
@@ -30,7 +30,7 @@
             required
           /><br />
 
-          <button type="submit">Login</button><br />
+          <input type="submit" name="submit" value="Login" /><br />
           <label>
             <input type="checkbox" checked="checked" name="remember" /> Remember
             me
