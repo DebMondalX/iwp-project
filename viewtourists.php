@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,7 +23,9 @@
   <body>
     <?php
       echo "<h3> List of Tourists Registered With SuitCase :</h3>";
-
+      echo "Welcome ".$_SESSION["username"];
+      echo "<br>";
+  
         function openConnection(){
             $username = "root";
             $password = "";

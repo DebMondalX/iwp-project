@@ -19,8 +19,12 @@
         
     
     if( mysqli_num_rows($result) > 0)
-    {
-        header("Location: admin-homepage.html");
+    {   
+       $row  = mysqli_fetch_array($result);
+        session_start();
+        $_SESSION["username"] = $row['username'];
+        $_SESSION["password"] = $row['password'];
+        header("Location: admin-homepage.php");
         echo "User exists";
     }
     else

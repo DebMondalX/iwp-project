@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +11,11 @@
 </head>
 <body>
     <h2>Enter updated values:</h2>
+    <?php
+    echo "updating data for hotel ".$_SESSION["hotel-name"];
+    ?>
     <form action="updhotel.php" method="post">
-    Enter email for hotel to update: <br>
-    <input type="email" name="hemail" id="hemail">
-    <br>
+    
     Enter password:
     <br>
     <input type="password" name="password" id = "password"><br>
@@ -31,7 +35,7 @@
     </form>
     <?php
     if(isset($_POST['submit'])){
-        $hemail = $_POST['hemail'];
+        $hemail = $_SESSION["hotel-email"];
         $hpass = $_POST['password'];
         $hoteltype = $_POST['HotelType'];
         $phone = $_POST['hphone'];

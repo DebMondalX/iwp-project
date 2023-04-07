@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +10,10 @@
     <title>Document</title>
 </head>
 <body>
+<?php
+    echo "Welcome ".$_SESSION["username"];
+    echo "<br>";
+    ?>
     <form action="updatetourists.php" method="post">
         <label for="tourist-email">Enter tourist email-id</label><br>
         <input type="email" name="tourist-email" id="tourist-email" required>

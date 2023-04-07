@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +10,10 @@
     <title>Document</title>
 </head>
 <body>
+<?php
+    echo "Welcome ".$_SESSION["username"];
+    echo "<br>";
+    ?>
     <form action="updatehotels.php" method="post">
         <label for="hotel-name">Enter hotel name</label><br>
         <input type="text" name="hotel-name" id="hotel-name" required>
@@ -23,7 +30,10 @@
         include "connection.php";
         $sql = "select * from hotel_register where hotel_name='$hname' and email='$hemail';";
         $result = mysqli_query($conn,$sql); 
+        $row = mysqli_fetch_array($result);
         if(mysqli_num_rows($result)){
+            $_SESSION["hotel-email"] = $row['email'];
+            $_SESSION["hotel-name"] = $row['hotel_name'];
            header("location: updhotel.php");
         }
         else{

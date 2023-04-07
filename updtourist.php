@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +10,10 @@
     <title>Document</title>
 </head>
 <body>
+    <?php
+            echo "Welcome ".$_SESSION["username"];
+            echo "<br>";
+    ?>
     <h2>Enter updated values:</h2>
     <form action="updtourist.php" method="post">
     Enter email for tourist to update: <br>
