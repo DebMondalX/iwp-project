@@ -9,7 +9,7 @@
     
     include "connection.php";
    
-       $sql = "SELECT * FROM tourist_details WHERE Email = '$name' AND assword =
+       $sql = "SELECT * FROM tourist_details WHERE Email = '$name' AND password =
        '$pass'";
        $result = mysqli_query($conn, $sql);
        $check = mysqli_fetch_array($result);
