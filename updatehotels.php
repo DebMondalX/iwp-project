@@ -22,7 +22,8 @@
         $hemail = $_POST['hotel-email'];
         include "connection.php";
         $sql = "select * from hotel_register where hotel_name='$hname' and email='$hemail';";
-        if(mysqli_query($conn,$sql)){
+        $result = mysqli_query($conn,$sql); 
+        if(mysqli_num_rows($result)){
            header("location: updhotel.php");
         }
         else{

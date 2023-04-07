@@ -8,21 +8,18 @@
 </head>
 <body>
     <form action="updatetourists.php" method="post">
-        <label for="tourist-name">Enter Tourist name</label><br>
-        <input type="text" name="tourist-name" id="tourist-name" required>
-        <br>
-        <label for="hotel-email">Enter hotel email-id</label><br>
-        <input type="email" name="hotel-email" id="hotel-email" required>
+        <label for="tourist-email">Enter tourist email-id</label><br>
+        <input type="email" name="tourist-email" id="tourist-email" required>
         <br>
         <input type="submit" name="submit" value="Input changes">        
     </form>
     <?php
     if(isset($_POST['submit'])){
-        $hname = $_POST['hotel-name'];
-        $hemail = $_POST['hotel-email'];
+        $temail = $_POST['tourist-email'];
         include "connection.php";
-        $sql = "select * from hotel_register where hotel_name='$hname' and email='$hemail';";
-        if(mysqli_query($conn,$sql)){
+        $sql = "select * from tourist_details where email='$temail';";
+        $result = mysqli_query($conn,$sql);
+        if(mysqli_num_rows($result)){
            header("location: updtourist.php");
         }
         else{
