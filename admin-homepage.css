@@ -8,3 +8,10 @@ a {
   width: 100px;
   text-align: center;
 }
+
+body {
+  background-color: yellow;
+}
+h2 {
+  text-align: center;
+}
