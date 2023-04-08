@@ -13,22 +13,29 @@ session_start();
         text-align:center;
         background: aqua;
       }
-      body{
-        background-color: #AEF18E;
+      div{
+        display: flex;
+justify-content: center;
       }
-      table{
-        margin-left: auto;
-  margin-right: auto;
+      body{
+        background-color: #FF7F50;
+      }
+      .head{
+        background-color: white;
+        height: 50px;
       }
     </style>
   </head>
   <body>
     
-      <h3> The Hotels Registered With SuitCase are:</h3>
-        <?php
-        
-        echo " <h2>Welcome ".$_SESSION["username"]."</h2>";
+      <h3> The Hotels Reviews given by users:</h3>
+      <br>
+      <?php
+      echo "Welcome ".$_SESSION["username"];
         echo "<br>";
+        ?>
+      <div id="tables">
+        <?php
       
         function openConnection(){
             $username = "root";
@@ -53,39 +60,38 @@ session_start();
 
             $conn = openConnection();
             
-            $sql = "select * from hotel_register;";
+            $sql = "select * from reviews;";
 
 
     $result = mysqli_query($conn,$sql);
 
     if (mysqli_num_rows($result) > 0) {
         echo "<table border = 1>
-              <tr>
+              <tr class=\"head\">
               <th>Hotel Name</th>
-              <th>email ID</th>
-              <th>Hotel Type</th>
-              <th>Phone</th>
-              <th>Destination</th>
+              <th>From</th>
+              <th>To</th>
+              <th>Review</th>
               </tr>
               ";
         while($row = mysqli_fetch_array($result)){
               echo "<tr>";
-              echo "<td>".$row['hotel_name']."</tid>";
-              echo "<td>".$row['email']."</tid>";
-              echo "<td>".$row['hotel_type']."</tid>";
-              echo "<td>".$row['phone_no']."</tid>";
-              echo "<td>".$row['destination']."</tid>";
+              echo "<td>".$row['hotelname']."</tid>";
+              echo "<td>".$row['date_from']."</tid>";
+              echo "<td>".$row['date_to']."</tid>";
+              echo "<td>".$row['review']."</tid>";
               echo "</tr>";
         }
             echo "</table>";
         }
         else{
-            echo "No Hotels have registered.";
+            echo "No reviews yet.";
         }
         closeConnection($conn);
 
       
     ?>
+    </div>
      <a href="adminlogout.php"><button>Log out</button></a>
   </body>
 </html>

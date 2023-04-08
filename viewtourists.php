@@ -80,5 +80,6 @@ session_start();
 
       
     ?>
+    <a href="adminlogout.php"><button>Log out</button></a>
   </body>
 </html>

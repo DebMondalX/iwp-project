@@ -1,3 +1,4 @@
+
 <?php
     $name=$pass="";
     if(isset($_POST['submit']))
@@ -19,7 +20,11 @@
         
     
     if( mysqli_num_rows($result) > 0)
-    {
+    {    $row  = mysqli_fetch_array($result);
+        session_start();
+        $_SESSION["username"] = $row['email'];
+        $_SESSION["password"] = $row['password'];
+        $_SESSION["name"] = $row['hotel_name'];
        header("Location: hotel-homepage.php");
     }
     else

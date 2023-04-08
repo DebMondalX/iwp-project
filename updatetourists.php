@@ -8,6 +8,12 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        form{
+            margin: 0 auto; 
+width:250px;
+        }
+    </style>
 </head>
 <body>
 <?php
@@ -35,5 +41,7 @@ session_start();
            }
 }
     ?>
+    <br><br><br>
+    <a href="adminlogout.php"><button>Log out</button></a>
 </body>
 </html>
